@@ -1,0 +1,38 @@
+/* styles.css */
+
+/* Estilos generales de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+}
+
+/* Estilos para los encabezados de la tabla */
+th {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos para las celdas de la tabla */
+td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Estilos de hover para las filas de la tabla */
+tr:hover {
+    background-color: #f5f5f5;
+}
+
+/* Estilos para el cuerpo de la tabla */
+tbody {
+    font-size: 14px;
+}
+
+/* Estilos para el título de la tabla */
+caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
