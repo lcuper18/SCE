@@ -1,0 +1,45 @@
+Necesito crear un sistema para llevar el control del servicio comunal estudiantil de estudiantes de ultimo grado de secundaria, para este fin se cuenta con la lista de estudiantes por seccion,
+los datos por cada estudiantes son los siguientes:
+
+id_estudiante
+nombre, apellido1, apellido2, telefono, email, fecha_nacimiento, direccion.
+
+Cada grupo debera entregar una propuesta inicial que debellevar los siguientes datos:
+Nombre del proyecto, tutor, lista de alumnos que realizan el proyecto, ubicacion geografica,
+Descripcion del proyecto.
+
+Posterior a la aprobacion de esta propuesta, los estudiantes deberan completar la propuesta
+del servicio comunal estudiantil con los siguientes datos:
+Nombre del Proyecto: (El nombre del proyecto debe ser llamativo – acorde con la temática a intervenir).
+
+Ubicación Geográfica: (Sitio específico donde se realizará el SCE / Institución - Comunidad - Distrito - Cantón - Provincia).
+
+Población Meta: (Grupo de personas a quienes va dirigido el proyecto y por ende se beneficiarán de este; se debe describir el mismo, considerando características socio-económicas y demás).
+
+Breve Descripción y Resumen del Proyecto: (Este apartado pretende recopilar una descripción de lo que se pretende realizar en el proyecto y cómo se desarrollará; contemplando para ello actividades, recursos (tiempo - humano - material) metas, objetivos, entre otros).
+
+Justificación: (Responde a la pregunta ¿Porqué el proyecto? ¿Qué problema(s) se propone resolver?, la respuesta se brinda mediante una adecuada contextualización del proyecto, un respaldo bibliográfico valido acerca de la temática que ataca mí proyecto y un nexo que permita llegar a ubicarse en el cuerpo del proyecto).
+
+Objetivo General: (Responde a la pregunta ¿Qué se propone resolver o lograr? Y se debe delimitar temporal y espacialmente).
+
+Objetivos Específicos: (Detallan la pregunta planteada anteriormente, es decir, que objetivos se deben plantear para lograr lo propuesto en el objetivo general, se sugiere elaborar de tres (3) a máximo cinco (5), procurar no confundirlos con las actividades a realizar).
+
+Metas: (logros concretos que se esperan alcanzar, cuantitativos y cualitativos).
+
+Cronograma / Actividades: (Responde a las preguntas ¿Cómo y cuándo? / Agregar un espacio al final para observaciones tales como materiales, cambios de fechas, dificultades, otras).
+
+Actividades de Evaluación: Definir los indicadores de éxito (se derivan directamente de las metas propuestas)
+
+Recursos: (Incluye humanos, materiales y financieros. Es importante indicar aquí posibles alianzas con empresas privadas, ya definidas o, si se solicita apoyo para gestionarlas).
+
+Bitácora.
+
+Registro de Horas – Estudiantes (Original).
+
+Registro de Horas - Personal de organización(Copia).
+
+Anexos: Fotografiás del antes y después del proyecto, experiencias personales de los estudiantes durante el proceso del servicio comunal.
+
+Ayudame con el proceso de analisis para crear la base de datos que sirva para el llevar el control de entrega de multiples grupo de estudiantes que realizan el
+Servicio Comunal Estudiantil, ademas que permita guardar los datos por periodo, ejemplo: 
+Servicio Comunal Estudiantil 2023, 2024, 2025, etc. 
