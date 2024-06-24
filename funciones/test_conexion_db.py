@@ -21,3 +21,4 @@ def test():
     except mysql.connector.Error as error:
         return("Error:", error)
     
+print(test())
