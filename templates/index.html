@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz de Docentes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Lista de Docentes</h1>
+    <table id="docentes-table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Apellido1</th>
+                <th>Apellido2</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Fecha de Nacimiento</th>
+                <th>Edad</th>
+                <th>Dirección</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Los datos se cargarán aquí -->
+        </tbody>
+    </table>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('/get_docentes')
+                .then(response => response.json())
+                .then(data => {
+                    const tableBody = document.querySelector('#docentes-table tbody');
+                    data.forEach(docente => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${docente.id_docente}</td>
+                            <td>${docente.nombre}</td>
+                            <td>${docente.apellido1}</td>
+                            <td>${docente.apellido2}</td>
+                            <td>${docente.telefono}</td>
+                            <td>${docente.email}</td>
+                            <td>${docente.fecha_nacimiento}</td>
+                            <td>${docente.edad}</td>
+                            <td>${docente.direccion}</td>
+                        `;
+                        tableBody.appendChild(row);
+                    });
+                });
+        });
+    </script>
+</body>
+</html>
