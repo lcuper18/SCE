@@ -25,7 +25,7 @@ def authenticate():
     password = request.form['password']
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM Docentes WHERE id_docente = %s AND apellido1 = %s", (username, password))
+    cursor.execute("SELECT * FROM login WHERE id_docente = %s AND password = %s", (username, password))
     user = cursor.fetchone()
     cursor.close()
     connection.close()

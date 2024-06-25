@@ -20,6 +20,7 @@
                 <th>Fecha de Nacimiento</th>
                 <th>Edad</th>
                 <th>Dirección</th>
+                <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
@@ -47,8 +48,29 @@
                         <td>${formattedFechaNacimiento}</td>
                         <td>${docente.edad}</td>
                         <td>${docente.direccion}</td>
+                        <td>
+                            <button class="play-button" data-id="${docente.id_docente}">Actualizar</button>
+                            <button class="play-button" data-id="${docente.id_docente}">Eliminar</button>
+                        </td>
                     `;
                     tableBody.appendChild(row);
+                });
+
+                // Agregar eventos a los botones
+                document.querySelectorAll('.update-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = this.getAttribute('data-id');
+                        alert(`Actualizar docente con ID: ${id}`);
+                        // Aquí puedes agregar la lógica para actualizar el docente
+                    });
+                });
+
+                document.querySelectorAll('.delete-button').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const id = this.getAttribute('data-id');
+                        alert(`Eliminar docente con ID: ${id}`);
+                        // Aquí puedes agregar la lógica para eliminar el docente
+                    });
                 });
             });
         });

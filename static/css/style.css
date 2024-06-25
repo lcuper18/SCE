@@ -48,3 +48,37 @@ tr:last-child td {
     background: white;
     padding: 15px;
 }
+
+/*CSS para botones*/
+.play-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ffd700;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 10px; /* Añade un margen derecho a los botones */
+  }
+  
+  .play-button::before {
+    content: "\25B6";  /* Unicode for play triangle */
+    margin-right: 10px;
+  }
+  
+  .play-button:hover {
+    background-color: #ffc800;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+  }
+  
+  .play-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  /*CSS para botones - FIN*/
