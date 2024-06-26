@@ -24,56 +24,35 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Los datos se cargarán aquí -->
+            <!-- Los datos se cargarán aquí dinámicamente -->
         </tbody>
     </table>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('/get_docentes')
-            .then(response => response.json())
-            .then(data => {
-                const tableBody = document.querySelector('#docentes-table tbody');
-                data.forEach(docente => {
-                    const row = document.createElement('tr');
-                    const fechaNacimiento = new Date(docente.fecha_nacimiento);
-                    const formattedFechaNacimiento = `${fechaNacimiento.getDate()}-${fechaNacimiento.getMonth() + 1}-${fechaNacimiento.getFullYear()}`;
-                    row.innerHTML = `
-                        <td>${docente.id_docente}</td>
-                        <td>${docente.nombre}</td>
-                        <td>${docente.apellido1}</td>
-                        <td>${docente.apellido2}</td>
-                        <td>${docente.telefono}</td>
-                        <td>${docente.email}</td>
-                        <td>${formattedFechaNacimiento}</td>
-                        <td>${docente.edad}</td>
-                        <td>${docente.direccion}</td>
-                        <td>
-                            <button class="play-button" data-id="${docente.id_docente}">Actualizar</button>
-                            <button class="play-button" data-id="${docente.id_docente}">Eliminar</button>
-                        </td>
-                    `;
-                    tableBody.appendChild(row);
-                });
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Actualizar Docente</h2>
+            <form id="update-form">
+                <input type="hidden" id="id_docente" name="id_docente">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="apellido1">Apellido 1:</label>
+                <input type="text" id="apellido1" name="apellido1" required>
+                <label for="apellido2">Apellido 2:</label>
+                <input type="text" id="apellido2" name="apellido2" required>
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <label for="direccion">Dirección:</label>
+                <input type="text" id="direccion" name="direccion" required>
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+    </div>
 
-                // Agregar eventos a los botones
-                document.querySelectorAll('.update-button').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const id = this.getAttribute('data-id');
-                        alert(`Actualizar docente con ID: ${id}`);
-                        // Aquí puedes agregar la lógica para actualizar el docente
-                    });
-                });
-
-                document.querySelectorAll('.delete-button').forEach(button => {
-                    button.addEventListener('click', function() {
-                        const id = this.getAttribute('data-id');
-                        alert(`Eliminar docente con ID: ${id}`);
-                        // Aquí puedes agregar la lógica para eliminar el docente
-                    });
-                });
-            });
-        });
-    </script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
