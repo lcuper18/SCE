@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
 </head>
 <body>
     <h1>Login</h1>
     <form action="/login" method="post">
-        <label for="username">Username:</label>
+        <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required><br><br>
-        <label for="password">Password:</label>
+        <label for="password">Contrasena:</label>
         <input type="password" id="password" name="password" required><br><br>
         <button type="submit">Login</button>
     </form>
