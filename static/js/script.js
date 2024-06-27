@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
         data.forEach(docente => {
             const row = document.createElement('tr');
             const fechaNacimiento = new Date(docente.fecha_nacimiento);
-            const formattedFechaNacimiento = `${fechaNacimiento.getDate()}-${fechaNacimiento.getMonth() + 1}-${fechaNacimiento.getFullYear()}`;
+            const formattedFechaNacimiento = `${fechaNacimiento.getDate()+1}-${fechaNacimiento.getMonth() + 1}-${fechaNacimiento.getFullYear()}`;
             row.innerHTML = `
                 <td>${docente.id_docente}</td>
                 <td>${docente.nombre}</td>
