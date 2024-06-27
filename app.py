@@ -54,8 +54,7 @@ def get_docentes():
     telefono, 
     email, 
     fecha_nacimiento, 
-    direccion,
-    TIMESTAMPDIFF(YEAR, fecha_nacimiento, CURDATE()) AS edad
+    direccion
     FROM Docentes
     """)
     docentes = cursor.fetchall()
