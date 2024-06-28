@@ -15,8 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 <td>${docente.apellido2}</td>
                 <td>${docente.telefono}</td>
                 <td>${docente.email}</td>
-                <td>${formattedFechaNacimiento}</td>
-                <td>${docente.edad}</td>
                 <td>${docente.direccion}</td>
                 <td>
                     <button class="play-button update-button" data-id="${docente.id_docente}">Actualizar</button>

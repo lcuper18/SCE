@@ -53,7 +53,6 @@ def get_docentes():
     apellido2, 
     telefono, 
     email, 
-    fecha_nacimiento, 
     direccion
     FROM Docentes
     """)
@@ -73,7 +72,6 @@ def get_docente(id):
     apellido2, 
     telefono, 
     email, 
-    fecha_nacimiento, 
     direccion
     FROM Docentes
     WHERE id_docente = %s
@@ -90,10 +88,10 @@ def update_docente(id):
     cursor = connection.cursor()
     query = """
     UPDATE Docentes
-    SET nombre = %s, apellido1 = %s, apellido2 = %s, telefono = %s, email = %s, fecha_nacimiento = %s, direccion = %s
+    SET nombre = %s, apellido1 = %s, apellido2 = %s, telefono = %s, email = %s, direccion = %s
     WHERE id_docente = %s
     """
-    values = (data['nombre'], data['apellido1'], data['apellido2'], data['telefono'], data['email'], data['fecha_nacimiento'], data['direccion'], id)
+    values = (data['nombre'], data['apellido1'], data['apellido2'], data['telefono'], data['email'], data['direccion'], id)
     cursor.execute(query, values)
     connection.commit()
     cursor.close()

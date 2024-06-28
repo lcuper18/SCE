@@ -3,11 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+    <title>Dashboard Profesional</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style3.css') }}">
 </head>
 <body>
-    <h1>Bienvenido al Dashboard</h1>
-    <a href="{{ url_for('lista_personal') }}">Ver Lista de Docentes</a>
+    <div class="sidebar">
+        <a href="#"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+        <a href="#" class="menu-item" data-target="usuarios-submenu"><i class="fas fa-users"></i> Usuarios</a>
+        <div class="submenu" id="usuarios-submenu">
+            <a href="#"><i class="fas fa-list"></i> Listar Usuarios</a>
+            <a href="#"><i class="fas fa-user-plus"></i> Agregar Usuario</a>
+            <a href="#"><i class="fas fa-user-edit"></i> Editar Usuario</a>
+            <a href="#"><i class="fas fa-user-times"></i> Eliminar Usuario</a>
+        </div>
+        <a href="#" class="menu-item" data-target="roles-submenu"><i class="fas fa-user-tag"></i> Roles y Permisos</a>
+        <div class="submenu" id="roles-submenu">
+            <a href="#"><i class="fas fa-list"></i> Listar Roles</a>
+            <a href="#"><i class="fas fa-plus"></i> Agregar Rol</a>
+            <a href="#"><i class="fas fa-edit"></i> Editar Rol</a>
+            <a href="#"><i class="fas fa-trash"></i> Eliminar Rol</a>
+        </div>
+        <a href="#" class="menu-item" data-target="perfiles-submenu"><i class="fas fa-user-cog"></i> Perfiles</a>
+        <div class="submenu" id="perfiles-submenu">
+            <a href="#"><i class="fas fa-user"></i> Ver Perfil</a>
+            <a href="#"><i class="fas fa-edit"></i> Editar Perfil</a>
+        </div>
+        <a href="#" class="menu-item" data-target="autenticacion-submenu"><i class="fas fa-lock"></i> Autenticación y Seguridad</a>
+        <div class="submenu" id="autenticacion-submenu">
+            <a href="#"><i class="fas fa-key"></i> Cambiar Contraseña</a>
+            <a href="#"><i class="fas fa-undo"></i> Restablecer Contraseña</a>
+            <a href="#"><i class="fas fa-history"></i> Historial de Acceso</a>
+        </div>
+        <a href="#" class="menu-item" data-target="invitaciones-submenu"><i class="fas fa-envelope"></i> Invitaciones y Registro</a>
+        <div class="submenu" id="invitaciones-submenu">
+            <a href="#"><i class="fas fa-envelope-open"></i> Enviar Invitación</a>
+            <a href="#"><i class="fas fa-list"></i> Ver Invitaciones</a>
+        </div>
+        <a href="#" class="menu-item" data-target="auditoria-submenu"><i class="fas fa-clipboard-list"></i> Auditoría y Logs</a>
+        <div class="submenu" id="auditoria-submenu">
+            <a href="#"><i class="fas fa-clipboard-check"></i> Logs de Actividad</a>
+            <a href="#"><i class="fas fa-shield-alt"></i> Auditoría de Seguridad</a>
+        </div>
+        <a href="#" class="menu-item" data-target="grupos-submenu"><i class="fas fa-users-cog"></i> Grupos</a>
+        <div class="submenu" id="grupos-submenu">
+            <a href="#"><i class="fas fa-list"></i> Listar Grupos</a>
+            <a href="#"><i class="fas fa-plus"></i> Agregar Grupo</a>
+            <a href="#"><i class="fas fa-edit"></i> Editar Grupo</a>
+            <a href="#"><i class="fas fa-trash"></i> Eliminar Grupo</a>
+        </div>
+        <a href="#" class="menu-item" data-target="integraciones-submenu"><i class="fas fa-link"></i> Integraciones</a>
+        <div class="submenu" id="integraciones-submenu">
+            <a href="#"><i class="fas fa-sync"></i> Sincronización con Directorio Activo</a>
+            <a href="#"><i class="fas fa-key"></i> API de Usuarios</a>
+        </div>
+        <a href="#"><i class="fas fa-sign-out-alt"></i> Salir</a>
+    </div>
+    <div class="main-content">
+        <div class="header">
+            <h1>Dashboard</h1>
+            <div class="user-info">
+                <img src="https://via.placeholder.com/40" alt="Usuario">
+                <span>Nombre de Usuario</span>
+            </div>
+        </div>
+        <div class="card">
+            <h2>Estadísticas</h2>
+            <p>Aquí puedes mostrar gráficos y estadísticas importantes.</p>
+        </div>
+        <div class="card">
+            <h2>Notificaciones</h2>
+            <p>Mensajes y alertas recientes.</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script_dashboard.js') }}"></script>
 </body>
 </html>
