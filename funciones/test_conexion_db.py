@@ -2,11 +2,11 @@ import mysql.connector
 
 def test():
     # Database connection details
-    MYSQLHOST = "monorail.proxy.rlwy.net"
+    MYSQLHOST = "localhost"
     MYSQLUSER = "root"
-    MYSQLPASSWORD = "ywsSqojfvtsIjQUqILlvNAmnBbBsyDqB"
-    MYSQLPORT = 47039
-    MYSQL_DATABASE = "railway"
+    MYSQLPASSWORD = "Palmitas1973"
+    MYSQLPORT = 3306
+    MYSQL_DATABASE = "SCE"
 
     try:
         # Connect to the database
@@ -21,4 +21,3 @@ def test():
     except mysql.connector.Error as error:
         return("Error:", error)
     
-print(test())

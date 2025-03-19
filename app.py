@@ -5,11 +5,11 @@ app = Flask(__name__)
 
 # Configuración de la base de datos
 config = {
-    'host': 'monorail.proxy.rlwy.net',
+    'host': 'localhost',
     'user': 'root',
-    'password': 'ywsSqojfvtsIjQUqILlvNAmnBbBsyDqB',
-    'port': 47039,
-    'database': 'SCE_Database'
+    'password': 'Palmitas1973',
+    'port': 3306,
+    'database': 'SCE'
 }
 
 def get_db_connection():
